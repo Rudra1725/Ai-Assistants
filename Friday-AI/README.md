@@ -1,5 +1,5 @@
 
-# 🎙️ FRIDAY – AI Voice Assistant
+# 🤖 FRIDAY – AI Voice Assistant
 
 **FRIDAY** is a Python-based desktop voice assistant designed to simplify everyday computer interactions through voice commands. It uses speech recognition to understand spoken instructions and performs tasks such as web searches, opening applications, playing YouTube videos, retrieving information from Wikipedia, and launching a developer workspace.
 
