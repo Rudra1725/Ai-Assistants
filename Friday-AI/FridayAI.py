@@ -8,6 +8,7 @@ import pyttsx3
 import pywhatkit
 import requests
 import wikipedia
+import pyautogui as pg
 
 try:
     import pyaudiowpatch as pyaudio
@@ -110,6 +111,17 @@ def execute_command(command):
     elif "time" in command:
         current_time = datetime.datetime.now().strftime("%I:%M %p")
         speak(f"It is {current_time}.")
+
+   elif "idle" in command.lower():
+        speak("Entering idle jiggle mode.")
+        import random
+        import time
+        for _ in range(7):
+            x = random.randint(300, 800)
+            y = random.randint(300, 800)
+            pg.moveTo(x, y, duration=0.2)
+            time.sleep(2)
+        speak("Idle sequence finished.")
 
     elif any(phrase in command for phrase in ["who is", "what is", "tell me about"]):
         query = command
